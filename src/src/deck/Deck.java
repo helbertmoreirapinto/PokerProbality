@@ -74,8 +74,8 @@ public final class Deck {
     }
 
     public Card getCard() {
-        int i = NUM_CARDS - 1;
-        Card card = deck[i];
+        int i = NUM_CARDS;
+        Card card = null;
         while (card == null) {
             card = deck[--i];
         }
@@ -90,14 +90,4 @@ public final class Deck {
         }
     }
 
-    public static void main(String[] args) {
-        Deck d = new Deck();
-        d.shuffle();
-        d.print();
-
-//        System.out.println("x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x");
-//        for (int i = 0; i < 10; i++) {
-//            System.out.println(d.getCard().toString());
-//        }
-    }
 }
