@@ -1,9 +1,5 @@
 package src.deck;
 
-/**
- *
- * @author helbert
- */
 public class Card {
 
     char value;
@@ -16,6 +12,6 @@ public class Card {
 
     @Override
     public String toString() {
-        return suit + " " + value;
+        return suit.toString() + value;
     }
 }

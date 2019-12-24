@@ -2,12 +2,7 @@ package src.game;
 
 import src.deck.Card;
 import src.deck.Deck;
-import src.deck.Suit;
 
-/**
- *
- * @author helbert
- */
 public class Poker {
 
     Player players[];
@@ -16,12 +11,12 @@ public class Poker {
     public Poker(int num_players) {
         players = new Player[num_players];
         for (int i = 0; i < num_players; i++) {
-            players[i] = new Player();
+            players[i] = new Player(String.format("PLAYER %d", i));
         }
     }
 
     public static void main(String[] args) {
-        int NUM_PLAYERS = 7;
+        int NUM_PLAYERS = 10;
         Poker poker = new Poker(NUM_PLAYERS);
         poker.deck = new Deck();
         poker.deck.shuffle();

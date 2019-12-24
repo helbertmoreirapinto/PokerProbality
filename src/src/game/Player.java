@@ -2,10 +2,6 @@ package src.game;
 
 import src.deck.Card;
 
-/**
- *
- * @author helbert
- */
 public class Player {
 
     String name;
@@ -22,6 +18,6 @@ public class Player {
 
     @Override
     public String toString() {
-        return name + ": " + hand[0].toString() + ", " + hand[1].toString();
+        return name + ": " + hand[0].toString() + " " + hand[1].toString();
     }
 }

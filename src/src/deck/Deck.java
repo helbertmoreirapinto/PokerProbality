@@ -1,11 +1,5 @@
 package src.deck;
 
-import java.lang.reflect.Array;
-
-/**
- *
- * @author helbert
- */
 public final class Deck {
 
     private final Card deck[];
@@ -28,9 +22,9 @@ public final class Deck {
     }
 
     private char getValue(int num_value) {
-        Character c = '1';
         switch (num_value) {
             case 1:
+                return 'A';
             case 2:
             case 3:
             case 4:
@@ -39,12 +33,13 @@ public final class Deck {
             case 7:
             case 8:
             case 9:
+                char c = '1';
                 while (--num_value > 0) {
                     c++;
                 }
                 return c;
             case 10:
-                return 'D';
+                return 'T';
             case 11:
                 return 'J';
             case 12:
