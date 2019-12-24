@@ -15,39 +15,7 @@ public final class Deck {
         char value;
         Suit suit;
         for (int i = 0; i < NUM_CARDS; i++) {
-            suit = Suit.getSuit(i / 13);
-            value = getValue((i % 13) + 1);
-            deck[i] = new Card(suit, value);
-        }
-    }
-
-    private char getValue(int num_value) {
-        switch (num_value) {
-            case 1:
-                return 'A';
-            case 2:
-            case 3:
-            case 4:
-            case 5:
-            case 6:
-            case 7:
-            case 8:
-            case 9:
-                char c = '1';
-                while (--num_value > 0) {
-                    c++;
-                }
-                return c;
-            case 10:
-                return 'T';
-            case 11:
-                return 'J';
-            case 12:
-                return 'Q';
-            case 13:
-                return 'K';
-            default:
-                return ' ';
+            deck[i] = new Card(i);
         }
     }
 

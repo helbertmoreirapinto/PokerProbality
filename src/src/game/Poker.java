@@ -25,7 +25,7 @@ public class Poker {
 
         for (int i = 0; i < 2; i++) {
             for (int j = 0; j < NUM_PLAYERS; j++) {
-                poker.players[j].hand[i] = poker.deck.getCard();
+                poker.players[j].cards_hand[i] = poker.deck.getCard();
             }
         }
 
@@ -35,7 +35,10 @@ public class Poker {
         }
 
         for (int j = 0; j < NUM_PLAYERS; j++) {
-            System.out.println(poker.players[j].toString());
+            poker.players[j].evaluate_hand(table);
+            System.out.print(poker.players[j].toString());
+            System.out.print(" ");
+            System.out.println(poker.players[j].hand.toString());
         }
 
         System.out.println("");
@@ -45,4 +48,5 @@ public class Poker {
         System.out.print("\n");
 
     }
+
 }
